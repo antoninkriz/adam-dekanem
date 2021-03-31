@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
   max-width: 480px;
 `;
 

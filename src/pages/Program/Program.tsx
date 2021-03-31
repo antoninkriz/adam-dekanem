@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Slide from '../../components/Slide/Slide';
 import {
   IoThumbsUpSharp,
-  IoBarChartSharp,
-  IoCheckmarkSharp,
+  IoAnalyticsOutline,
+  IoBonfireOutline,
 } from 'react-icons/io5';
 import { IconType } from 'react-icons';
 
@@ -20,6 +20,14 @@ const Title = styled.h2`
     padding: 25px;
     font-size: 2rem;
   }
+`;
+
+const List = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 `;
 
 const Wrapper = styled.div`
@@ -41,8 +49,8 @@ const Icon = (component: IconType) => styled(component)`
 `;
 
 const ThumbUp = Icon(IoThumbsUpSharp);
-const Chart = Icon(IoBarChartSharp);
-const Checkmark = Icon(IoCheckmarkSharp);
+const Analytics = Icon(IoAnalyticsOutline);
+const Bonfire = Icon(IoBonfireOutline);
 
 const Content = styled.div`
   width: 100%;
@@ -55,33 +63,34 @@ const Program = (): JSX.Element => {
   return (
     <Slide id="program">
       <Title>PROGRAM</Title>
-      <Wrapper>
-        <ThumbUp />
-        <Content>
-          <strong>První</strong>
-          <br />
-          Mým hlavním a jediným bodem programu je stížit podmínky kandidatury na
-          děkana.
-        </Content>
-      </Wrapper>
-      <Wrapper>
-        <Chart />
-        <Content>
-          <strong>Druhý</strong>
-          <br />
-          Nyní může kandidovat opravdu každý, stačí nebýt komunistou. Já, ty a i
-          tvá matka.
-        </Content>
-      </Wrapper>
-      <Wrapper>
-        <Checkmark />
-        <Content>
-          <strong>Třetí</strong>
-          <br />
-          Dnes se může být děkanem již opravdu každý. Nenechme si vzít svou
-          fakultiu!
-        </Content>
-      </Wrapper>
+      <List>
+        <Wrapper>
+          <ThumbUp />
+          <Content>
+            <strong>Ztížení podmínek kandidatury na děkana</strong>
+            <br />
+            Zavedení základních podmínek pro případné kandidáty na děkana, aby
+            nedošlo k přehlcení systému.
+          </Content>
+        </Wrapper>
+        <Wrapper>
+          <Bonfire />
+          <Content>
+            <strong>Volitelný humanitní předmět kurz přežití </strong>
+            <br />
+            BI-KPZ určený především studentům prvních ročníků a všem, kdo se
+            právě odstěhovali od maminky.
+          </Content>
+        </Wrapper>
+        <Wrapper>
+          <Analytics />
+          <Content>
+            <strong>Rozšíření výzkumu podílového kritéria pro funkce</strong>
+            <br />
+            Založení výzkumné skupiny na naší fakultě pro výzkum této oblasti.
+          </Content>
+        </Wrapper>
+      </List>
     </Slide>
   );
 };

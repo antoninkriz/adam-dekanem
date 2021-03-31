@@ -74,7 +74,7 @@ const Home = (): JSX.Element => {
           DĚKANEM
         </Title>
         <Quote>
-          Jsem pro stížení podmínek kandidatury na děkana
+          To že můžu ještě neznamená, že bych měl…
           <br />
           -Adam Procháska
         </Quote>
