@@ -40,6 +40,7 @@ const Link = styled.a`
   font-size: 1rem;
   color: ${(props) => props.theme.colors.white};
   text-decoration: none;
+  font-style: italic;
   transition: transform 0.2s ease-in-out;
 
   :hover {

@@ -46,6 +46,7 @@ const Checkmark = Icon(IoCheckmarkSharp);
 
 const Content = styled.div`
   width: 100%;
+  padding: 0 15px;
   font-weight: 200;
   color: ${(props) => props.theme.colors.white};
 `;

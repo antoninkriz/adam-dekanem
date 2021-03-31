@@ -93,10 +93,18 @@ const Menu = (): JSX.Element => {
         {opened ? <IconClose /> : <IconMenu />}
       </Button>
       <Content opened={opened}>
-        <ContentLink href="#home">DOMŮ</ContentLink>
-        <ContentLink href="#video">VIDEO</ContentLink>
-        <ContentLink href="#program">PROGRAM</ContentLink>
-        <ContentLink href="#contacts">KONTAKTY</ContentLink>
+        <ContentLink href="#home" onClick={() => open(!opened)}>
+          DOMŮ
+        </ContentLink>
+        <ContentLink href="#video" onClick={() => open(!opened)}>
+          VIDEO
+        </ContentLink>
+        <ContentLink href="#program" onClick={() => open(!opened)}>
+          PROGRAM
+        </ContentLink>
+        <ContentLink href="#contacts" onClick={() => open(!opened)}>
+          KONTAKTY
+        </ContentLink>
         <ContentCopyright href="https://www.antoninkriz.eu/">
           © Antonín Kříž
         </ContentCopyright>
