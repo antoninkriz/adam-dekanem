@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Menu from './components/Menu/Menu';
+import Home from './pages/Home/Home';
+import Video from './pages/Video/Video';
+import Program from './pages/Program/Program';
+import Contacts from './pages/Contacts/Contacts';
 
-function App() {
+const Body = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  background: ${(props) => props.theme.colors.primary};
+`;
+
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Body>
+        <Home />
+        <Video />
+        <Program />
+        <Contacts />
+      </Body>
+      <Menu />
+    </>
   );
-}
+};
 
 export default App;
