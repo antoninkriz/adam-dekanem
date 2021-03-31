@@ -69,7 +69,7 @@ const Program = (): JSX.Element => {
           <Content>
             <strong>Ztížení podmínek kandidatury na děkana</strong>
             <br />
-            Zavedení základních podmínek pro případné kandidáty na děkana, aby
+            Zavedení základních podmínek pro kandidaturu na děkana, aby nedošlo
             nedošlo k přehlcení systému.
           </Content>
         </Wrapper>

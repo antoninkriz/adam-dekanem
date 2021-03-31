@@ -74,9 +74,8 @@ const Home = (): JSX.Element => {
           DĚKANEM
         </Title>
         <Quote>
-          To že můžu ještě neznamená, že bych měl…
-          <br />
-          -Adam Procháska
+          To, že můžu, ještě neznamená, že bych měl…
+          <br />– Adam Procháska
         </Quote>
       </TextWrapper>
     </Slide>
