@@ -35,8 +35,7 @@ const Interview = (): JSX.Element => {
             minulých letech byl celkem úzký výběr, letos ale máme štěstí. V
             prvním ročníku bakalářského studia se objevil člověk připravený
             kandidovat vždy a všude. Jeho jméno je Adam Procháska a k datu
-            vydání se jedná o žhavého favorita. Časopis Buď FIT vám s ním
-            přináší exkluzivní rozhovor.
+            vydání se jedná o žhavého favorita.
           </ArticleItalic>
         </ArticleParagraph>
 
