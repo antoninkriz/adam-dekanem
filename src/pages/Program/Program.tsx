@@ -52,7 +52,7 @@ const LinkButton = styled(HashLink)`
   justify-content: space-evenly;
   align-items: center;
   padding: 25px;
-  margin: 10px 10px 30px;
+  margin: 30px 10px;
   background: ${(props) => props.theme.colors.white};
   color: ${(props) => props.theme.colors.primary};
   text-decoration: none;

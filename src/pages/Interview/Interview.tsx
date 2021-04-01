@@ -31,7 +31,7 @@ const Interview = (): JSX.Element => {
         <ArticleTitle>Prvák děkanem?</ArticleTitle>
         <ArticleParagraph>
           <ArticleItalic>
-            Letos naši fakultu čeká důležité rozhodnutí – volba děkana. V
+            Tento rok naši fakultu čeká důležité rozhodnutí – volba děkana. V
             minulých letech byl celkem úzký výběr, letos ale máme štěstí. V
             prvním ročníku bakalářského studia se objevil člověk připravený
             kandidovat vždy a všude. Jeho jméno je Adam Procháska a k datu
