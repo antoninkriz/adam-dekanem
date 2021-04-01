@@ -8,7 +8,7 @@ import App from './App';
 import theme from './theme';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
-ReactGA.initialize('G-M9EZ1WH82Q');
+ReactGA.initialize('UA-83580150-6');
 
 render(
   <React.StrictMode>
