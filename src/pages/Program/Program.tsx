@@ -68,16 +68,13 @@ const Program = (): JSX.Element => {
     <Slide id="program">
       <SlideTitle>PROGRAM</SlideTitle>
       <List>
-        <LinkButton to="/rozhovor">
-          ROZHOVOR S KANDIDÁTEM <IoChevronForward />
-        </LinkButton>
         <Wrapper>
           <ThumbUp />
           <Content>
             <strong>Ztížení podmínek kandidatury na děkana</strong>
             <br />
             Zavedení základních podmínek pro kandidaturu na děkana, aby nedošlo
-            nedošlo k přehlcení systému.
+            k přehlcení systému.
           </Content>
         </Wrapper>
         <Wrapper>
@@ -97,6 +94,9 @@ const Program = (): JSX.Element => {
             Založení výzkumné skupiny na naší fakultě pro výzkum této oblasti.
           </Content>
         </Wrapper>
+        <LinkButton to="/rozhovor">
+          ROZHOVOR S KANDIDÁTEM <IoChevronForward />
+        </LinkButton>
       </List>
     </Slide>
   );

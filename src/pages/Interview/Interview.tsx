@@ -136,7 +136,7 @@ const Interview = (): JSX.Element => {
 
         <ArticleParagraph>
           <ArticleStrong>
-            Máte v podlaze místo na krabice od vína popř. co tam máte, že místo
+            Máte v podlaze místo na krabice od vína, popř. co tam máte, že místo
             nemáte?
           </ArticleStrong>
         </ArticleParagraph>
@@ -157,7 +157,7 @@ const Interview = (): JSX.Element => {
           ministra zdravotnictví (požadavky jsou přibližně stejné jako na
           děkana). Je pochopitelné, že ve funkci vydržím nanejvýš týden, nicméně
           pozice ministra je dobrým odrazovým můstkem pro kandidaturu na vyšší
-          pozici popř. bych mohl během výjezdu na Erasmus zastávat funkci
+          pozici, popř. bych mohl během výjezdu na Erasmus zastávat funkci
           velvyslance v dané zemi.
         </ArticleParagraph>
 
