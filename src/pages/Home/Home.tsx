@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 import ReactGA from 'react-ga';
 import Slide from '../../components/Slide/Slide';
 import AdamPng from './adam.png';
@@ -69,6 +70,10 @@ const Home = (): JSX.Element => {
 
   return (
     <Slide id="home">
+      <Helmet title="Adam Děkanem">
+        <meta property="og:title" content="Adam Děkanem" />
+        <meta property="og:url" content="https://adamdekanem.cz/" />
+      </Helmet>
       <ImageAdam src={AdamPng} alt="Adam Procháska" />
       <TextWrapper>
         <Title>

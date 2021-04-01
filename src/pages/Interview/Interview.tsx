@@ -25,7 +25,13 @@ const Interview = (): JSX.Element => {
 
   return (
     <Slide>
-      <Helmet title="Prvák děkanem? - Rozhovor | Adam Děkanem" />
+      <Helmet title="Prvák děkanem? - Rozhovor | Adam Děkanem">
+        <meta
+          property="og:title"
+          content="Prvák děkanem? - Rozhovor | Adam Děkanem"
+        />
+        <meta property="og:url" content="https://adamdekanem.cz/rozhovor" />
+      </Helmet>
       <SlideTitle>Rozhovor</SlideTitle>
       <Article>
         <ArticleTitle>Prvák děkanem?</ArticleTitle>
