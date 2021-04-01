@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { IoMenuSharp, IoCloseSharp } from 'react-icons/io5';
 
-const Button = styled.div`
+const MenuButton = styled.div`
   position: fixed;
   top: 50px;
   right: 50px;
@@ -46,7 +47,7 @@ const Content = styled.div<IContent>`
   z-index: ${(props) => props.theme.zIndex.menu};
 `;
 
-const ContentLink = styled.a`
+const MenuLink = styled(HashLink)`
   font-size: 3rem;
   color: ${(props) => props.theme.colors.primary};
   text-decoration: none;
@@ -58,7 +59,7 @@ const ContentLink = styled.a`
   }
 `;
 
-const ContentCopyright = styled.a`
+const CopyrightLink = styled.a`
   position: absolute;
   bottom: 15px;
   font-size: 1rem;
@@ -69,6 +70,29 @@ const ContentCopyright = styled.a`
 
   :hover {
     transform: scale(1.1);
+  }
+`;
+
+const Logo = styled.span`
+  display: block;
+  position: absolute;
+  margin: 15px;
+  top: 15px;
+  left: 15px;
+  color: transparent;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  -webkit-text-stroke: 2px ${(props) => props.theme.colors.primary};
+
+  ::selection {
+    color: ${(props) => props.theme.colors.primary};
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 1.25rem;
+    -webkit-text-stroke: 1px ${(props) => props.theme.colors.primary};
   }
 `;
 
@@ -89,25 +113,33 @@ const Menu = (): JSX.Element => {
 
   return (
     <>
-      <Button onClick={() => open(!opened)}>
+      <MenuButton onClick={() => open(!opened)}>
         {opened ? <IconClose /> : <IconMenu />}
-      </Button>
+      </MenuButton>
       <Content opened={opened}>
-        <ContentLink href="#home" onClick={() => open(!opened)}>
+        <Logo>
+          ADAM
+          <br />
+          DĚKANEM
+        </Logo>
+        <MenuLink smooth to="/#home" onClick={() => open(false)}>
           DOMŮ
-        </ContentLink>
-        <ContentLink href="#video" onClick={() => open(!opened)}>
+        </MenuLink>
+        <MenuLink smooth to="/rozhovor" onClick={() => open(false)}>
+          ROZHOVOR
+        </MenuLink>
+        <MenuLink smooth to="/#video" onClick={() => open(false)}>
           VIDEO
-        </ContentLink>
-        <ContentLink href="#program" onClick={() => open(!opened)}>
+        </MenuLink>
+        <MenuLink smooth to="/#program" onClick={() => open(false)}>
           PROGRAM
-        </ContentLink>
-        <ContentLink href="#contacts" onClick={() => open(!opened)}>
+        </MenuLink>
+        <MenuLink smooth to="/#contacts" onClick={() => open(false)}>
           KONTAKTY
-        </ContentLink>
-        <ContentCopyright href="https://www.antoninkriz.eu/">
+        </MenuLink>
+        <CopyrightLink href="https://www.antoninkriz.eu/">
           © Antonín Kříž
-        </ContentCopyright>
+        </CopyrightLink>
       </Content>
     </>
   );

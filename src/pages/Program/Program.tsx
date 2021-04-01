@@ -1,26 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import Slide from '../../components/Slide/Slide';
+import Slide, { SlideTitle } from '../../components/Slide/Slide';
 import {
   IoThumbsUpSharp,
-  IoAnalyticsOutline,
+  IoFlaskSharp,
   IoBonfireOutline,
+  IoChevronForward,
 } from 'react-icons/io5';
 import { IconType } from 'react-icons';
-
-const Title = styled.h2`
-  margin: 0;
-  padding: 100px;
-  font-size: 3rem;
-  text-align: center;
-  font-weight: 600;
-  color: ${(props) => props.theme.colors.white};
-
-  @media (max-width: 1024px) {
-    padding: 25px;
-    font-size: 2rem;
-  }
-`;
+import { HashLink } from 'react-router-hash-link';
 
 const List = styled.div`
   display: flex;
@@ -49,7 +37,7 @@ const Icon = (component: IconType) => styled(component)`
 `;
 
 const ThumbUp = Icon(IoThumbsUpSharp);
-const Analytics = Icon(IoAnalyticsOutline);
+const Flask = Icon(IoFlaskSharp);
 const Bonfire = Icon(IoBonfireOutline);
 
 const Content = styled.div`
@@ -59,11 +47,30 @@ const Content = styled.div`
   color: ${(props) => props.theme.colors.white};
 `;
 
+const LinkButton = styled(HashLink)`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 25px;
+  margin: 10px 10px 30px;
+  background: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.primary};
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+
+  :hover {
+    transform: scale(1.1);
+  }
+`;
+
 const Program = (): JSX.Element => {
   return (
     <Slide id="program">
-      <Title>PROGRAM</Title>
+      <SlideTitle>PROGRAM</SlideTitle>
       <List>
+        <LinkButton to="/rozhovor">
+          ROZHOVOR S KANDIDÁTEM <IoChevronForward />
+        </LinkButton>
         <Wrapper>
           <ThumbUp />
           <Content>
@@ -83,7 +90,7 @@ const Program = (): JSX.Element => {
           </Content>
         </Wrapper>
         <Wrapper>
-          <Analytics />
+          <Flask />
           <Content>
             <strong>Rozšíření výzkumu podílového kritéria pro funkce</strong>
             <br />

@@ -1,22 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Slide from '../../components/Slide/Slide';
-import { IoAtSharp } from 'react-icons/io5';
+import Slide, { SlideTitle } from '../../components/Slide/Slide';
+import { IoAtSharp, IoPeopleOutline } from 'react-icons/io5';
 import { IconType } from 'react-icons';
-
-const Title = styled.h2`
-  margin: 0;
-  padding: 100px;
-  font-size: 3rem;
-  text-align: center;
-  font-weight: 600;
-  color: ${(props) => props.theme.colors.white};
-
-  @media (max-width: 1024px) {
-    padding: 25px;
-    font-size: 2rem;
-  }
-`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -35,6 +21,8 @@ const Icon = (component: IconType) => styled(component)`
 
 const Email = Icon(IoAtSharp);
 
+const People = Icon(IoPeopleOutline);
+
 const Link = styled.a`
   font-weight: 200;
   font-size: 1rem;
@@ -52,12 +40,16 @@ const Link = styled.a`
 const Contacts = (): JSX.Element => {
   return (
     <Slide id="contacts">
-      <Title>KONTAKT</Title>
+      <SlideTitle>KONTAKTY</SlideTitle>
       <Wrapper>
         <Email />
         <Link href="mailto:prochaska@adamdekanem.cz">
           prochaska@adamdekanem.cz
         </Link>
+      </Wrapper>
+      <Wrapper>
+        <People />
+        <Link href="mailto:team@adamdekanem.cz">team@adamdekanem.cz</Link>
       </Wrapper>
     </Slide>
   );

@@ -1,30 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import Slide from '../../components/Slide/Slide';
+import { SlideCentered } from '../../components/Slide/Slide';
+import Poster from './poster.png';
 
-const SlideCentered = styled(Slide)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
-
-const IFrame = styled.iframe`
+const Player = styled.video`
   display: block;
   width: 100%;
   margin: auto;
   height: 100vh;
   padding: 0;
+  background: ${(props) => props.theme.colors.black};
 `;
 
 const Video = (): JSX.Element => {
   return (
     <SlideCentered id="video">
-      <IFrame
-        src="https://www.youtube-nocookie.com/embed/gjCSJIAKEPM?vq=hd1080&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3"
-        frameBorder="0"
-      />
+      <Player src="/video.mp4" controls preload="auto" poster={Poster} />
     </SlideCentered>
   );
 };
