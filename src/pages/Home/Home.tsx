@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ReactGA from 'react-ga';
 import Slide from '../../components/Slide/Slide';
 import AdamPng from './adam.png';
 
@@ -64,6 +65,8 @@ const Quote = styled.p`
 `;
 
 const Home = (): JSX.Element => {
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   return (
     <Slide id="home">
       <ImageAdam src={AdamPng} alt="Adam Procháska" />

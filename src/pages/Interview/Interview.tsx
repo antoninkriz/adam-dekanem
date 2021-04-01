@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import ReactGA from 'react-ga';
 import Slide, { SlideTitle } from '../../components/Slide/Slide';
 import AdamFitPng from './adam_fit.jpg';
 import {
@@ -20,6 +21,8 @@ import {
 } from '../../components/Article/Article';
 
 const Interview = (): JSX.Element => {
+  ReactGA.pageview(window.location.pathname + window.location.search);
+
   return (
     <Slide>
       <Helmet title="Prvák děkanem? - Rozhovor | Adam Děkanem" />
