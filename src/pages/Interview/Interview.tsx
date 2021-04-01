@@ -31,6 +31,7 @@ const Interview = (): JSX.Element => {
           content="Prvák děkanem? - Rozhovor | Adam Děkanem"
         />
         <meta property="og:url" content="https://adamdekanem.cz/rozhovor" />
+        <link rel="canonical" href="https://adamdekanem.cz/rozhovor" />
       </Helmet>
       <SlideTitle>Rozhovor</SlideTitle>
       <Article>

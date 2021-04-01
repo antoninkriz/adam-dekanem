@@ -73,6 +73,7 @@ const Home = (): JSX.Element => {
       <Helmet title="Adam Děkanem">
         <meta property="og:title" content="Adam Děkanem" />
         <meta property="og:url" content="https://adamdekanem.cz/" />
+        <link rel="canonical" href="https://adamdekanem.cz/" />
       </Helmet>
       <ImageAdam src={AdamPng} alt="Adam Procháska" />
       <TextWrapper>
